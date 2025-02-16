@@ -1,0 +1,12 @@
+streamlit
+Pillow
+google-generativeai
+langchain
+PyPDF2
+langchain-google-genai
+youtube-transcript-api
+langchain-community
+faiss-cpu
+plotly
+pandas
+requests
