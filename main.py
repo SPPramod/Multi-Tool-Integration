@@ -81,7 +81,6 @@ try:
         page = st.selectbox("Go to", ["Home", "ChatBot", "Image Captioning", "PDF Reader", "Data Analysis", "Knowledge Graph"])
 
     if page == "Home":
-        st.header("Multi Tool Integration For Research Assistance")
         st.write("""
         Multi-tool integration for research assistance leverages various AI-powered tools to streamline and enhance the research process. This comprehensive approach combines different technological capabilities to provide a more efficient and thorough research experience.
         
