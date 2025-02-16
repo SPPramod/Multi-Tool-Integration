@@ -13,7 +13,7 @@ import plotly.express as px
 import requests
 import json
 
-API_KEY = "API_KEY" 
+API_KEY = st.secrets["API_KEY"] 
 genai.configure(api_key=API_KEY)
 
 if 'pdf_chat_history' not in st.session_state:
