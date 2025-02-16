@@ -51,8 +51,6 @@ Engage in interactive conversations powered by advanced natural language process
 
 ### Contact
 
-## Contact
-
 For any inquiries or feedback, please contact:
 
 - **Sathya Pushana Pramod**: [pushanapramod@gmail.com](mailto:pushanapramod@gmail.com)
