@@ -258,7 +258,10 @@ try:
             filtered_results = []
             for item in data.get('itemListElement', []):
                 result = item.get('result', {})
-                if 'Person' in result.get('@type', []):
+                # Include multiple types instead of just 'Person'
+                if any(entity_type in result.get('@type', []) for entity_type in [
+                    'Person', 'Book', 'Movie', 'Place', 'Monument', 'Event', 'Organization', 'Thing'
+                ]):
                     filtered_results.append(result)
 
             if filtered_results:
@@ -267,14 +270,16 @@ try:
                     description = result.get("description", "No Description")
                     detailed_desc = result.get("detailedDescription", {}).get("articleBody", "No Detailed Description")
                     url = result.get("detailedDescription", {}).get("url", "")
+                    image = result.get("image", {}).get("contentUrl", "")
 
                     st.subheader(name)
+                    if image:
+                        st.image(image, width=300)
                     st.write(f"**Description:** {description}")
                     st.write(f"**Detailed Description:** {detailed_desc}")
                     if url:
                         st.markdown(f"[Read more]({url})")
             else:
                 st.warning("No relevant results found.")
-
 except Exception as e:
     st.error(f"An error occurred: {str(e)}")
